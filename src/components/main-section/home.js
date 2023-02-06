@@ -1,8 +1,8 @@
 import hero from '../../img/hero-pic 2.png';
 export function home() {
     const home = document.createElement('section');
-    home.className = 'home section';
-    home.setAttribute('id', 'home');
+    home.className = 'home section section-active';
+    home.setAttribute('id', 'home-section');
     const divText = document.createElement('div');
     divText.className = 'section-text';
     const title = document.createElement('h1');

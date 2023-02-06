@@ -1,4 +1,5 @@
 import logoImg from '../img/logo.svg';
+import { home } from './main-section/home';
 
 function logo() {
     const logoLink = document.createElement('a');
@@ -16,8 +17,15 @@ function menu() {
     navMenu.setAttribute('id', 'nav_menu');
     const navList = document.createElement('ul');
     navList.classList.add('nav_list');
-
     const nav_item_home = document.createElement('li');
+    nav_item_home.addEventListener('click', () => {
+        const sections = document.querySelectorAll('section');
+        const homeSection = document.querySelector('#home-section');
+        sections.forEach(section => {
+            section.classList.remove('section-active');
+        });
+        homeSection.classList.add('section-active');
+    });
     nav_item_home.classList.add('nav_item');
     const link_home = document.createElement('a');
     link_home.href = '#';
@@ -43,6 +51,14 @@ function menu() {
     link_services.className = 'nav_link active-link';
     link_services.setAttribute('id', 'services');
     nav_item_services.appendChild(link_services);
+    nav_item_services.addEventListener('click', () => {
+        const sections = document.querySelectorAll('section');
+        const servicesSection = document.querySelector('#services-section');        
+        sections.forEach(section => {
+            section.classList.remove('section-active');
+        });
+        servicesSection.classList.add('section-active');
+    });
     navList.appendChild(nav_item_services);
     const nav_item_about = document.createElement('li');
     nav_item_about.classList.add('nav_item');
@@ -52,6 +68,14 @@ function menu() {
     link_about.className = 'nav_link active-link';
     link_about.setAttribute('id', 'about');
     nav_item_about.appendChild(link_about);
+    nav_item_about.addEventListener('click', () => {
+        const sections = document.querySelectorAll('section');
+        const aboutSection = document.querySelector('#about-us-section');
+        sections.forEach(section => {
+            section.classList.remove('section-active');
+        });
+        aboutSection.classList.add('section-active');
+    });
     navList.appendChild(nav_item_about);
     navMenu.appendChild(navList);
     return navMenu;
