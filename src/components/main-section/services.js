@@ -21,7 +21,7 @@ export function services() {
         spans[i].className = 'text-card';
     }
     spans[0].innerHTML = '24/7 Service';
-    spans[1].innerHTML = 'Best Cheft';
+    spans[1].innerHTML = 'Best Chefs';
     spans[2].innerHTML = 'Fast Delivery';
     spans[3].innerHTML = 'Table Reservation';
     spans[4].innerHTML = 'Free Delivery';
